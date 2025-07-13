@@ -1,2 +1,2 @@
 #!/bin/bash
-nano 4-listmorefiles
+ls -la
