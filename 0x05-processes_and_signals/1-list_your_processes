@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Script to list running processes in required format
-
 echo "USER STARTED CMD"
 ps -eo user,start,cmd --no-headers | awk '{print $1, $2, $3, $4}'
