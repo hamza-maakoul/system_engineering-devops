@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# This script lists all running processes with custom columns
-ps -eo user,lstart,cmd --sort=start_time --no-headers | awk '{ 
-    user=$1; 
-    start=$4":"$5":"$6; 
-    cmd=""; 
-    for (i=8; i<=NF; i++) cmd=cmd $i " "; 
-    printf "%s %s %s\n", user, start, cmd 
-}' | column -t | sed '1i USER STARTED CMD'
+# Lists all running processes with user, start time, and command
+
+echo "USER STARTED CMD"
+ps -eo user,lstart,cmd --no-headers | awk '{ 
+    printf "%s %s:%s:%s %s\n", $1, $4, $5, $6, $8 
+}'
