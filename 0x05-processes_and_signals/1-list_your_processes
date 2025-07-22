@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # Script to list running processes in exact expected format
-
-echo "USER STARTED CMD"
-ps -eo user,lstart,cmd --no-headers | awk '{printf "%s %s:%s:%s %s\n", $1, $4, $5, $6, $8}'
+# Use -eo to specify custom output format.
+# 'user' for USER
+# 'start_time' for STARTED (and hoping it includes seconds)
+# 'cmd' for CMD (this usually truncates, or requires specific format)
+# This command *will not* show hierarchy like 'ps axf'
+ps -eo user,start_time,cmd
