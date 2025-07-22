@@ -1,2 +1,2 @@
-#!/bin/bash
+ #!/usr/bin/env bash
 # This script displays a list of all running processes in a tree-like format.
