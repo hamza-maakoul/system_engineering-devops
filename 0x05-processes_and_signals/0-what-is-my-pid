@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-[Got]
-e
-(1 chars long)
-
-[Expected]
-#
-(1 chars long)
